@@ -1,0 +1,157 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "remitente",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "destinatario",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "monto",
+				"type": "uint256"
+			}
+		],
+		"name": "FondosRetenidos",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "remitente",
+				"type": "address"
+			}
+		],
+		"name": "PagoCancelado",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "destinatario",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "monto",
+				"type": "uint256"
+			}
+		],
+		"name": "PagoLiberado",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "cancelarPago",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "obtenerBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "pagos",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "remitente",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "destinatario",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "monto",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tiempoLimite",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "existe",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_destinatario",
+				"type": "address"
+			}
+		],
+		"name": "realizarPagoEscrow",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "verificarRetencion",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
+dirección: 0xDd31952efb18f5934D9a6b9a6ce914b5ec32C5e6
